@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:url('./NicePng_forest-trees-png_934310.png');
+    background-color: #3b3b63;
+    background-repeat: no-repeat;
+    background-size:cover;
+    overflow:hidden;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+.nevbar{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap: wrap;
+    background-color: #4d4d6e;
+    color: #ffffff;
+    padding: 2px;
+}
+
+
+
+
+.info{
+    color: black;
+    display: none;
+    float: top;
+    position: relative;
+    top: 2em;
+    right: 1.5em;
+    background-color: #f6f6f6;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 25px;
+
+}
+
+.sky{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.precipitation{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sky div{
+    padding: 3px;
+    margin: 5px;
+    width: 100px;
+    display: flex;
+    border: 1px solid #d5d5e0;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sky div:hover{
+    border: 1px solid #686899;
+}
+.precipitation div:hover{
+    border: 1px solid #686899;
+}
+
+.precipitation div{
+    padding: 3px;
+    margin: 5px;
+    width: 120px;
+    display: flex;
+    border: 1px solid #d5d5e0;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skynew div{
+    width: 150px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+}
+
+.info .img_style:hover{
+    display: block;
+}
+
+.img_style{
+    width: 0.25em;
+    align-items: flex-start;
+    
+}
+
+
+#btn:hover {
+    background: #3c3a3a6b;
+  }
+
+.design{
+    text-decoration: none;
+    border: 1px solid #62627f;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 5px;
+    background-color: #62627f;
+    color: white;
+    font-weight: bold;
+    margin: 3px;
+}
+#input_city{
+    width:20em;
+    border-radius: 10px;
+}
+
+/* #input_city:after{
+    border: none;
+} */
+h1.temp {
+    margin: 0;
+    margin-bottom: 0.4em;
+}
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    text-transform: capitalize;
+    margin-left: 8px;
+}
+
+.weather{
+    background: #4d4d6e;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    width: 100%;
+    max-width: 320px;
+    margin: 3em;
+}
+
+.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 20px;
+}
+
+#btn{
+    cursor: pointer;
+    padding: 5px;
+}
+.container{
+    padding: 20px 70px;
+    color:#fff;
+    /* display: flex;
+    justify-content:space-between; */
+}
+
+.current-info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.date-container{
+    font-weight: 100;
+}
+.date-container .time{
+    font-size: 70px;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.date-container #am-pm{
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.date-container .date{
+    font-size: 3;
+}
+.place{
+    text-align: end;
+}
+
+.place .time-zone{
+    font-size: 15 px;
+    font-weight: 100;
+}
+
+.place .country{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.current-info .others{
+    display: flex;
+    flex-direction: column;
+    background: #4d4d6e;
+    padding:20px;
+    border-radius: 10px;
+    margin: 10px 0;
+    /* border: 1px solid #eee; */
+}
+
+.current-info .others .weather-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.future-forecast{
+    /* background: #3b3b63; */
+    padding: 25px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    color:white;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+.future-forecast .today{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid #eee; */
+    border-radius: 10px;
+    padding:15px;
+    padding-right: 40px;
+    border-radius: 10px;
+    background: #4d4d6e;
+}
+
+.future-forecast .today .day{
+    padding: 5px 15px;
+    background: #4d4d6e;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.future-forecast .today .temp{
+    font-size: 18px;
+    padding-top: 15px;
+}
+
+.future-forecast .weather-forecast{
+    display: flex;
+}
+
+.weather-forecast .daily_weather{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    /* border: 1px solid #eee; */
+    padding: 15px;
+    border-radius: 10px;
+    background: #4d4d6e;
+    cursor: pointer;
+}
+
+.weather-forecast .daily_weather .day{
+    padding: 5px 15px;
+    background: #4d4d6e;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.weather-forecast .daily_weather .temp{
+    font-weight: 100;
+    font-size: 12px;
+}
+
+
+@media only screen and  (max-width:880px){
+    .container{
+        padding: 20px;
+    }
+    
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-y: scroll;
+    }
+
+    .future-forecast .today .temp{
+        font-size: 16px;
+    }
+
+    .date-container .time{
+        font-size: 40px;
+    }
+
+    .date-container #am-pm{
+        font-size: 10px;
+    }
+
+    .date-container .date{
+        font-size: 18px;
+    }
+
+    .place{
+        text-align: end;
+        margin-top: 14px;
+    }
+
+    .place .time-zone{
+        font-size: 18px;
+    }
+
+    .current-info .others{
+        padding: 12px;
+    }
+
+    .current-info .others .weather-item{
+        font-size: 13px;
+    }
+
+    .date-container{
+        display: none;
+    }
+}
+
+@media only screen and  (max-width:730px){
+
+    
+
+    .date-container{
+        display: none;
+    }
+
+    .weather{
+        border-radius: 30px;
+        width: 100%;
+        max-width: 220px;
+        
+    }
+
+
+    .weather h1{
+        font-size: 22px;
+        
+    }
+    .weather div{
+        font-size: 14px;
+        
+    }
+
+
+    .weather h2{
+        font-size: 18px;
+        
+    }
+
+}
+
+@media only screen and (max-width: 1400px){
+    .future-forecast{
+        justify-content: start;
+        align-items: none;
+        overflow-x: scroll;
+    }
+}

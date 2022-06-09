@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1ac37a2d32.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+
+
+    <header>
+        <div class="nevbar">
+            <div class="nooo">
+                <!-- <img src=""  class="" alt=""> -->
+            </div>
+            <div class="search">
+
+                <input type="search" placeholder="Search for location" id="input_city" class="design search-bar">
+                <button id="btn" class="design">Search</button>
+
+            </div>
+
+            <div class="place">
+                <div class="time-zone" id="time-zone">Asia/Kolkata</div>
+                <div id="country" class="country">IN</div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+        <div class="current-info">
+
+            <div class="date-container">
+                <div class="time" id="time">
+                    12:30<span id="am-pm">PM</span>
+                </div>
+                <div class="date" id="date">
+                    Monday, 25 May
+                </div>
+                <!-- <div>
+                    <input type="text" id="txtIP" />
+                    <button id="btnGetIpDetail">Get Location of IP</button>
+                </div> -->
+
+                <div class="others" id="current-weather-items">
+
+
+                </div>
+            </div>
+            <div class="info" id="info_id">
+                <div class="sky">
+                    <div>
+                        <img src="http://openweathermap.org/img/w/01d.png" alt="">
+                        <h4>Sunny</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/02d.png" alt="">
+                        <h4>Partly Cloudy</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/03d.png" alt="">
+                        <h4>Cloudy</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/09d.png" alt="">
+                        <h4>Shower Rain</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/04d.png" alt="">
+                        <h4>Broken Clouds</h4>
+                    </div>
+                </div>
+                <div class="precipitation">
+                    <div>
+                        <img src="http://openweathermap.org/img/w/11d.png" alt="">
+                        <!-- <i class="fa-solid fa-temperature-arrow-down"></i> -->
+                        <h4>Thunderstorm</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/10d.png" alt="">
+                        <h4>Rain</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/13d.png" alt="">
+                        <h4>Snow</h4>
+                    </div>
+                    <div>
+                        <img src="http://openweathermap.org/img/w/50d.png" alt="">
+                        <h4>Mist</h4>
+                    </div>
+                </div>
+                <div class="sky skynew">
+                    <div>
+                        <i class="fa-solid fa-temperature-high fa-2x"></i>
+                        <h4>Warm</h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-temperature-half fa-2x"></i>
+                        <h4>About Right</h4>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-temperature-low fa-2x"></i>
+                        <h4>Cold</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weather loading">
+                <h2 class="city">Weather in Delhi</h2>
+                <h1 class="temp">40°C</h1>
+                <div class="flex">
+                    <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+                    <div class="description">Cloudy</div>
+                </div>
+                <div class="humidity">Humidity: 20%</div>
+                <div class="wind">Wind speed: 6.2 km/h</div>
+                <div class="pressure">Pressure: 0 m <b></b></div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="get_weather">
+        <!-- <div class="input">
+                <input type="text" placeholder="Enter the city" class="input_text">
+                <input type="submit" value="Submit" class="submit">
+              </div>
+            </div> -->
+
+        <div class="city_info">
+            <div class="card">
+                <h1 id="cityname"></h1>
+                <h2 id="desc"></h2>
+                <h1 id="temprature"></h1>
+                <h3><span id="min"></span>
+                    <span id="max"></span>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+    <div class="future-forecast">
+        <div class="today" id="current-temp">
+            <!-- <h4><i class="fa-solid fa-circle-info"></i></h4> -->
+            <img src="" alt="weather icon" class="w-icon">
+            <div class="other">
+                <div class="day">Monday</div>
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#176; C</div>
+            </div>
+        </div>
+
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="daily_weather">
+                <div class="day">Tue</div>
+                <img src="" alt="weather icon" class="w-icon">
+                <div class="temp">Night - 25.6&#176; C</div>
+                <div class="temp">Day - 35.6&#1daily_weather
+                    <div class="daily_weather">
+                        <div class="day">Wed</div>
+                        <img src="" alt="weather icon" class="w-icon">
+                        <div class="temp">Night - 25.6&#176; C</div>
+                        <div class="temp">Day - 35.6&#176; C</div>
+                    </div>
+                    <div class="daily_weather">
+                        <div class="day">Thur</div>
+                        <img src="" alt="weather icon" class="w-icon">
+                        <div class="temp">Night - 25.6&#176; C</div>
+                        <div class="temp">Day - 35.6&#176; C</div>
+                    </div>
+                    <div class="daily_weather">
+                        <div class="day">Fri</div>
+                        <img src="" alt="weather icon" class="w-icon">
+                        <div class="temp"></div>
+                        <div class="temp"></div>
+                    </div>
+                    <div class="daily_weather">
+                        <div class="day">Sat</div>
+                        <img src="" alt="weather icon" class="w-icon">
+                        <div class="temp">Night - 25.6&#176; C</div>
+                        <div class="temp">Day - 35.6&#176; C</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="script.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+                integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+                crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
